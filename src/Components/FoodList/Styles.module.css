@@ -1,0 +1,71 @@
+
+.mainDiv{
+    display: flex;
+justify-content: space-between;
+align-items: center;
+width: 100%;
+padding:0px 20px;
+margin: 5px;
+border-bottom: 1px solid grey;
+}
+.mainDiv>:nth-child(1){
+    /* background-color: aquamarine; */
+    /* border: 1px 0px 0px 0px solid gray; */
+}
+.name{
+    /* background-color: aqua; */
+display: block;
+font-weight: bold;
+text-transform: capitalize;
+}
+.details{
+    /* background-color: aqua; */
+display: block;
+font-size: 13px;
+color: rgb(70, 70, 70);
+text-transform:lowercase;
+}
+.price{
+    /* background-color: aqua; */
+  display: block;  
+  color: rgb(215, 64, 4);
+  font-weight: bold;
+  font-size: 15px;
+}
+.cart_inputs{
+    /* background-color: aqua; */
+    text-align: end;
+    
+}
+.cart_inputs>input{
+    /* background-color: aqua; */
+    width: 30px;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin-bottom: 2px;
+}
+.add_to_buttons{
+    /* background-color: aqua; */
+}
+.add_to_buttons>span{
+    /* background-color: rgb(36, 79, 79); */
+    margin-right: 3px;
+    font-size: 10px;
+    color: white;
+}
+.add_to_buttons>button{
+    background-color: rgb(253, 113, 7);
+    border: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+    color: white;
+    transition: 0.3s ease-in-out;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.add_to_buttons>button:hover{
+    /* background-color: aqua; */
+    background-color: rgb(138, 43, 5);
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+
+}

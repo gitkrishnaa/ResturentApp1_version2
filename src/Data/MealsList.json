@@ -1,0 +1,27 @@
+[
+{"name":"Sushi",
+"details":"finest fish and vegetables",
+"price":"160"
+},
+{"name":"Momo",
+"details":"strretfood vegetabe filled ",
+"price":"210"
+},
+{"name":"burger",
+"details":"so tasty and yummy burger",
+"price":"220"
+},
+{"name":"Samosa",
+"details":"famous indian streetfood ",
+"price":"500"
+},
+{"name":"pizza",
+"details":"so tasty and crisp pizza",
+"price":"350"
+}
+
+
+
+
+
+]
