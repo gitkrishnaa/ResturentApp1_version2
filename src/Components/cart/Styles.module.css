@@ -1,0 +1,17 @@
+.CartButton1>button{
+    background: rgba(160, 1, 1, 0.548);
+    border: none;
+    padding: 7px 15px;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+.CartButton1>button:hover{
+    background: rgb(139, 3, 3);
+    border: none;
+    padding: 10px 20px;
+    /* width: 200px; */
+    border-radius: 20px;
+    margin: 0px -5px;
+    color: white;
+    box-shadow: 1px 2px 10px 1px white;
+}
