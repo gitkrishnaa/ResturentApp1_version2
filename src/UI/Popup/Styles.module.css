@@ -1,6 +1,22 @@
 
 .MainPopup_div{
 width: 60vw;
-height: 200px;
-background-color: aqua;
+min-height: 200px;
+background-color: rgb(255, 255, 255);
+position: fixed;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50% );
+box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 90px;border-radius: 10px;
+
 }
+
+.BackDrop{
+width: 100vw;
+height: 100vh;
+background-color: rgba(69, 69, 69, 0.296);
+position: fixed;
+top: 0px;
+left: 0px;
+}
+    
