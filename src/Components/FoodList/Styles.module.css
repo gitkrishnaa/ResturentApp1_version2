@@ -43,6 +43,7 @@ text-transform:lowercase;
     border: 1px solid black;
     border-radius: 5px;
     margin-bottom: 2px;
+    text-align: center;
 }
 .add_to_buttons{
     /* background-color: aqua; */
