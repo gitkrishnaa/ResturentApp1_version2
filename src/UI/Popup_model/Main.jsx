@@ -15,7 +15,7 @@ return <div onClick={props.onClosePopup} className={Styles.BackDrop}></div>
 <React.Fragment>
 <BackDrop onClosePopup={props.onClosePopup}/>
 <div className={Styles.MainPopup_div}>
-   <div><button onClick={props.onClosePopup}>X</button></div>
+   <div className={Styles.close_popup_button}><button onClick={props.onClosePopup} >X</button></div>
    <div>{props.children}</div> 
 </div>
 
