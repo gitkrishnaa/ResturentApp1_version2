@@ -10,7 +10,7 @@ function CartButton(props) {
 
   return (
     <div className={Styles.CartButton1}>
-<button >
+<button  onClick={props.onShowPopup}>
     <span><BiCartAlt/> </span>
     <span>Cart </span>
     <span>{`${props.totalCartNumber}`}

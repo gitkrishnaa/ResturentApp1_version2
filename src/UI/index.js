@@ -1,1 +1,1 @@
-export {default as Popup} from "./Popup/Main"
+export {default as Popup} from "./Popup_model/Main"

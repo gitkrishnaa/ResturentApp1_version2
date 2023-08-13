@@ -13,7 +13,7 @@ const closeCart_popup=()=>{
   return (
     <div>
       <Header onShowPopup={openCart_popup} />
-    {showPopup?<CartPopup onShowPopup={openCart_popup} onClosepopup={closeCart_popup}/>:console.log("popup is closed")}
+    {showPopup?<CartPopup onShowPopup={openCart_popup} onClosePopup={closeCart_popup}/>:console.log("popup is closed")}
       <div>
         <img
           style={{

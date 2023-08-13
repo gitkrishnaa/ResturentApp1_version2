@@ -1,10 +1,10 @@
 import React from 'react'
 import Styles from "./Main.module.css";
 import {Navbar} from "../../Components/index"
-function Main() {
+function Main(props) {
   return (
     <div>
-<Navbar/>
+<Navbar onShowPopup={props.onShowPopup}/>
 
 
 

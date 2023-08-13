@@ -4,10 +4,8 @@ import { Popup } from '../../../UI/index'
 function Main(props) {
    
   return (
-    <Popup>
+    <Popup onClosePopup={props.onClosePopup}> 
 <div>item xyz order</div>
-
-
     </Popup>
   )
 }
