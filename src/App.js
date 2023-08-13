@@ -1,10 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import { Header,FoodShow } from "./Containers/index";
 import banner from "./Assets/banner3.jpg";
+import { CartPopup } from "./Components/cart";
 function App() {
+const [showPopup,setShowPopup]=useState(false)
+const openCart_popup=()=>{
+  setShowPopup(true)
+}
+const closeCart_popup=()=>{
+  setShowPopup(false)
+}
   return (
     <div>
-      <Header />
+      <Header onShowPopup={openCart_popup} />
+    {showPopup?<CartPopup onShowPopup={openCart_popup} onClosepopup={closeCart_popup}/>:console.log("popup is closed")}
       <div>
         <img
           style={{

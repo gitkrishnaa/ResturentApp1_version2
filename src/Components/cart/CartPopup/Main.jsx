@@ -1,12 +1,14 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Styles from "./Styles.module.css"
 import { Popup } from '../../../UI/index'
-function Main() {
+function Main(props) {
+   
   return (
-   <Popup popup_state_true={true}>
-        <div className={Styles.MainDiv}>Mainvfdvdfvdf</div>
+    <Popup>
+<div>item xyz order</div>
 
-   </Popup>
+
+    </Popup>
   )
 }
 
