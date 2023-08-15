@@ -1,27 +1,22 @@
-import React, { useReducer } from 'react'
+import React, { useReducer, useState } from 'react'
 import CartContext from './Cart_Create_Context'
 import foodData from "../Data/MealsList.json"
 
 function Cart_context_provider(props) {
-let data={1:{name:"Momo",price:180,number:1}}
-const reducerhandler=()=>{
-
-}
-const [State,dispach]=useReducer(reducerhandler,data)
 
 
-const fetch_CartItem=()=>{
-return State;
-}
+const [cartState,setCartState]=useState({})
+
+
+
 
 const handler={
     addToCartItem:(x)=>{
-      alert("item added")
-        // let details=foodData[x];
-        // console.log(details)
+     let iten_details= foodData[x]
+     console.log(iten_details)
     },
     fetch_CartItem:()=>{
-        return State;
+        return cartState;
         }
     
 }
@@ -29,7 +24,7 @@ const handler={
 
 
   return (
-    <CartContext.Provider value={{State,handler}}>
+    <CartContext.Provider value={{cartState,handler}}>
 {props.children}
 
 
