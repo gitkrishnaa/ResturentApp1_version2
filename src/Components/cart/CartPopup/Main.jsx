@@ -4,7 +4,7 @@ import { Popup } from '../../../UI/index'
 import { CartContext } from '../../../Store_context'
 
 function Main(props) {
-   let CartContext_value=useContext(CartContext)
+   let CartContext_value=useContext(CartContext).cartState
    console.log(CartContext_value)
    const data_array=Object.keys(CartContext_value);
    console.log(data_array)
@@ -18,7 +18,8 @@ function Main(props) {
   return <div>
 <span>{CartContext_value[args].name} </span>
 <span>{CartContext_value[args].price} </span>
-<span>{CartContext_value[args].number} </span>
+{/* <span>{CartContext_value[args].number} </span> */}
+<span>{CartContext_value[args].n} </span>
   </div>
 })}
     </Popup>

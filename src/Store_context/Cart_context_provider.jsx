@@ -22,7 +22,19 @@ const [cartState,setCartState]=useState({})
 
 const handler={
     addToCartItem:(x)=>{
-     
+     const item_details=foodData[x];
+     let data={...cartState}
+     console.log(cartState)
+    //  add
+     if(data[x]==undefined){
+      data[x]={...item_details,n:1}
+      setCartState(data)
+     }
+    //  increse
+     else{
+      data[x].n+=1
+      setCartState(data)
+     }
     },
 
     fetch_CartItem:()=>{
