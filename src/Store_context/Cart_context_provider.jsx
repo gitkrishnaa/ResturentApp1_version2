@@ -15,16 +15,21 @@ return State;
 }
 
 const handler={
-    addToCartItem:()=>{
-        let details=foodData[x];
-        console.log(details)
-    }
+    addToCartItem:(x)=>{
+      alert("item added")
+        // let details=foodData[x];
+        // console.log(details)
+    },
+    fetch_CartItem:()=>{
+        return State;
+        }
+    
 }
 
 
 
   return (
-    <CartContext.Provider value={{data:State,handler:8}}>
+    <CartContext.Provider value={{State,handler}}>
 {props.children}
 
 

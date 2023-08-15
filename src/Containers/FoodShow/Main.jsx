@@ -12,7 +12,7 @@ function Main() {
         <div className={Styles.Sub_div}>
 {foodData.map((e,n)=>{
     
-return <FoodList key={"key"+n} name={e.name} details={e.details} price={e.price}/>
+return <FoodList key={"key"+n} id={n} name={e.name} details={e.details} price={e.price}/>
 
 
 })}

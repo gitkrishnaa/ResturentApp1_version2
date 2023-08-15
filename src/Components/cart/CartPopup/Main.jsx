@@ -5,7 +5,7 @@ import { CartContext } from '../../../Store_context'
 
 function Main(props) {
    let CartContext_value=useContext(CartContext)
-   console.log(CartContext_value[1])
+   console.log(CartContext_value)
    const data_array=Object.keys(CartContext_value);
    console.log(data_array)
   return (

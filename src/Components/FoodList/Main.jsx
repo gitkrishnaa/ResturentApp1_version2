@@ -1,7 +1,24 @@
-import React from "react";
+import React, { useContext, useRef } from "react";
 import Styles from "./Styles.module.css";
 import { BsFillCartPlusFill } from "react-icons/bs";
+import { CartContext } from "../../Store_context";
+
+
 function Main(props) {
+  // let iconRef=useRef()
+  console.log(<BsFillCartPlusFill id="high"/>)
+//context
+const addToCart=useContext(CartContext).handler.addToCartItem
+
+
+const addToCart_onclick_handler=(e)=>{
+  // addToCart()
+  e.stopPropagation()
+  alert(e.target.id)
+  console.log(e)
+  // console.log(iconRef)
+}
+
   return (
     <div className={Styles.mainDiv}>
       <div>
@@ -18,8 +35,16 @@ function Main(props) {
         </div>
         <div className={Styles.add_to_buttons}>
           <span>add to cart</span>
-          <button>
-            <BsFillCartPlusFill />
+          <button  style={{position:"relative"}}   >
+            <div style={{backgroundColor:"red",width:"100%",height:"100%",
+          position:"absolute",
+          left:"0px",
+          top:"0px",
+          background:"transparent"
+          
+          }} id={props.id} onClick={addToCart_onclick_handler}></div>
+            <BsFillCartPlusFill  />
+            
           </button>
         </div>
       </div>
