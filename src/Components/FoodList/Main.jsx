@@ -6,16 +6,16 @@ import { CartContext } from "../../Store_context";
 
 function Main(props) {
   // let iconRef=useRef()
-  console.log(<BsFillCartPlusFill id="high"/>)
+  // console.log(<BsFillCartPlusFill id="high"/>)
 //context
 const addToCart=useContext(CartContext).handler.addToCartItem
 
 
 const addToCart_onclick_handler=(e)=>{
-  // addToCart()
-  e.stopPropagation()
-  alert(e.target.id)
-  console.log(e)
+  addToCart(e.target.id)
+  // e.stopPropagation()
+  // alert(e.target.id)
+  // console.log(e)
   // console.log(iconRef)
 }
 

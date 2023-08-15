@@ -8,6 +8,10 @@ function Main(props) {
    console.log(CartContext_value)
    const data_array=Object.keys(CartContext_value);
    console.log(data_array)
+
+
+
+   
   return (
     <Popup onClosePopup={props.onClosePopup}> 
 {data_array.map((args)=>{

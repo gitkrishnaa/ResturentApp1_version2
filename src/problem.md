@@ -1,4 +1,4 @@
-# when on click on rect icon which is in button, it work as expected
+# when on click on rect icon which is in button, it not work as expected
 problem- i have used button and react icon compronent in button
 so i click to get id of button,it click on icon which not return id,becase id on button,icon not accepted id,it is imported component from react-icon
 
