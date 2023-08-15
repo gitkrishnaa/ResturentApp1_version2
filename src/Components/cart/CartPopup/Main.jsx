@@ -2,7 +2,7 @@ import React, { useContext, useState } from 'react'
 import Styles from "./Styles.module.css"
 import { Popup } from '../../../UI/index'
 import { CartContext } from '../../../Store_context'
-
+import ItemList from "./listRender"
 function Main(props) {
    let CartContext_value=useContext(CartContext).cartState;
    const cartTotal=useContext(CartContext).cartTotal;
@@ -15,13 +15,13 @@ function Main(props) {
    
   return (
     <Popup onClosePopup={props.onClosePopup}> 
-{data_array.map((args)=>{
-  return <div>
-<span>{CartContext_value[args].name} </span>
-<span>{CartContext_value[args].price} </span>
-{/* <span>{CartContext_value[args].number} </span> */}
-<span>{CartContext_value[args].n} </span>
-  </div>
+{data_array.map((e,n)=>{
+  let number=CartContext_value[e].n
+  let render=number>0?true:false;
+  
+  return render?<ItemList key={"key"+n} id={n}  name={CartContext_value[e].name} number={CartContext_value[e].n}  price={CartContext_value[e].price}/>
+  :false
+
 })}
 <div>{cartTotal}</div>
     </Popup>

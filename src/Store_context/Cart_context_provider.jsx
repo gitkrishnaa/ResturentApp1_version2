@@ -48,7 +48,22 @@ const handler={
 
     fetch_CartItem:()=>{
         return cartState;
-        }
+        },
+    removeToCartItem:(x)=>{
+          const item_details=foodData[x];
+          let data={...cartState}
+          console.log(cartState)
+         //  remove if item number n>1, since if decrese it ,it become zero means not exist
+          if(data[x].n<=1){
+            data[x].n-=1
+           setCartState(data)
+          }
+         //  decrese 
+          else{
+           data[x].n-=1
+           setCartState(data)
+          }
+         },
     
 }
 
