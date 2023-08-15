@@ -17,7 +17,8 @@ function Cart_context_provider(props) {
 
 
 const [cartState,setCartState]=useState({})
-const [cartTotal,setCartTotal]=useState(0)
+const [cartTotal,setCartTotal]=useState(0) //Amount
+const [cartTotalItem,setCartTotalItem]=useState(0)
 useEffect(()=>{
   let total=0;
   let data=cartState;
@@ -26,6 +27,16 @@ useEffect(()=>{
     total+=data[k].n*Number(data[k].price)
   })
   setCartTotal(total)
+let totalItem=0;
+
+  data_key.map((k,n)=>{
+    if(data[k].n>0){
+      totalItem++;
+    }
+   
+  })
+  setCartTotalItem(totalItem)
+console.log(cartTotalItem,"total item")
 
 },[cartState])
 
@@ -70,7 +81,7 @@ const handler={
 
 
   return (
-    <CartContext.Provider value={{cartState,handler,cartTotal}}>
+    <CartContext.Provider value={{cartState,handler,cartTotal,cartTotalItem}}>
 {props.children}
 
 

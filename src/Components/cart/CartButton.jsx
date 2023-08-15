@@ -1,10 +1,12 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import Styles from "./Styles.module.css"
 import {BiCartAlt} from 'react-icons/bi'
 import { CartPopup } from '.'
+import { CartContext } from "../../Store_context";
+
 function CartButton(props) {
 
-
+const cartTotalItem=useContext(CartContext).cartTotalItem
 
 
 
@@ -13,7 +15,7 @@ function CartButton(props) {
 <button  onClick={props.onShowPopup}>
     <span><BiCartAlt/> </span>
     <span>Cart </span>
-    <span>{`${props.totalCartNumber}`}
+    <span>{`${cartTotalItem}`}
 </span>
     </button>
 
