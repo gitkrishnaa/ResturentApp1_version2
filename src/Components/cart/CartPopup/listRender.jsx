@@ -27,22 +27,27 @@ const removeToCart_onclick_handler=(e)=>{
 }
 
   return (
-    <div className={Styles.mainDiv}>
+    // <React.Fragment>
+        <div>
+    <div className={Styles.MainDiv}>
       <div>
         <span className={Styles.name}>{props.name} </span>
         <span className={Styles.price}>{props.price} rs </span>
-        <span className={Styles.details}>{props.number} </span>
+        <span className={Styles.quantity}>{props.number} </span>
       </div>
 
    <div>
-    <button onClick={addToCart_onclick_handler} id={"add"+props.id}>+</button>
-    <button  onClick={removeToCart_onclick_handler} id={"remove"+props.id}>-</button>
+    <button className={Styles.button1} onClick={addToCart_onclick_handler} id={"add"+props.id}>+</button>
+    <button className={Styles.button1} onClick={removeToCart_onclick_handler} id={"remove"+props.id}>-</button>
    </div>
           
           
-         
+     
         
     </div>
+    <hr/>
+    </div>
+    
   );
 }
 

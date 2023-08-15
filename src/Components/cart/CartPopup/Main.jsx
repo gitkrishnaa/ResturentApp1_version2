@@ -23,7 +23,8 @@ function Main(props) {
   :false
 
 })}
-<div>{cartTotal}</div>
+<hr/>
+<div className={Styles.total1}><span>Total:</span><span>{cartTotal}</span></div>
     </Popup>
   )
 }
