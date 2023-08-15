@@ -7,6 +7,7 @@ function Main(props) {
         
 <div className={Styles.MainTitle}><span>FoodMeals</span></div>
 <div><CartButton totalCartNumber={0} onShowPopup={props.onShowPopup} /></div>
+{/* <div><CartButton totalCartNumber={0} onShowPopup={props.onShowPopup} /></div> */}
 
     </div>
   )
