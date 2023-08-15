@@ -1,4 +1,4 @@
-import React, { useReducer, useState } from 'react'
+import React, { useEffect, useReducer, useState } from 'react'
 import CartContext from './Cart_Create_Context'
 import foodData from "../Data/MealsList.json"
 
@@ -17,8 +17,17 @@ function Cart_context_provider(props) {
 
 
 const [cartState,setCartState]=useState({})
+const [cartTotal,setCartTotal]=useState(0)
+useEffect(()=>{
+  let total=0;
+  let data=cartState;
+  const data_key=Object.keys(data);
+  data_key.map((k,n)=>{
+    total+=data[k].n*Number(data[k].price)
+  })
+  setCartTotal(total)
 
-
+},[cartState])
 
 const handler={
     addToCartItem:(x)=>{
@@ -46,7 +55,7 @@ const handler={
 
 
   return (
-    <CartContext.Provider value={{cartState,handler}}>
+    <CartContext.Provider value={{cartState,handler,cartTotal}}>
 {props.children}
 
 

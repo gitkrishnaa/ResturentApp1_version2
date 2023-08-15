@@ -4,7 +4,8 @@ import { Popup } from '../../../UI/index'
 import { CartContext } from '../../../Store_context'
 
 function Main(props) {
-   let CartContext_value=useContext(CartContext).cartState
+   let CartContext_value=useContext(CartContext).cartState;
+   const cartTotal=useContext(CartContext).cartTotal;
    console.log(CartContext_value)
    const data_array=Object.keys(CartContext_value);
    console.log(data_array)
@@ -22,6 +23,7 @@ function Main(props) {
 <span>{CartContext_value[args].n} </span>
   </div>
 })}
+<div>{cartTotal}</div>
     </Popup>
   )
 }
